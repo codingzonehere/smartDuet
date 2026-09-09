@@ -1,0 +1,394 @@
+/* =========================================================
+   SMART DUET
+   ADMIN PANEL COMMON CSS
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   ADMIN COLORS
+   Different from applicant/user panel
+   --------------------------------------------------------- */
+
+:root {
+    --admin-primary: #198754;
+    --admin-dark: #146c43;
+    --admin-sidebar: #172b24;
+    --admin-light: #e9f7ef;
+    --admin-bg: #f5f7f9;
+    --admin-text: #212529;
+    --admin-muted: #6c757d;
+}
+
+
+/* ---------------------------------------------------------
+   BODY
+   --------------------------------------------------------- */
+
+.admin-body {
+    margin: 0;
+    background: var(--admin-bg);
+    color: var(--admin-text);
+    font-family: Arial, sans-serif;
+}
+
+
+/* ---------------------------------------------------------
+   SIDEBAR
+   --------------------------------------------------------- */
+
+.admin-sidebar {
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+    width: 250px;
+    height: 100vh;
+
+    background: var(--admin-sidebar);
+    color: #fff;
+
+    overflow-y: auto;
+
+    z-index: 1000;
+}
+
+
+/* Logo area */
+
+.admin-logo {
+    padding: 22px 20px;
+
+    text-align: center;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, .1);
+}
+
+.admin-logo img {
+    width: 55px;
+    height: 55px;
+
+    object-fit: contain;
+
+    margin-bottom: 8px;
+}
+
+.admin-logo h5 {
+    margin: 0;
+
+    font-size: 16px;
+}
+
+.admin-logo small {
+    opacity: .7;
+}
+
+
+/* ---------------------------------------------------------
+   ADMIN MENU
+   --------------------------------------------------------- */
+
+.admin-menu {
+    padding: 15px 10px;
+}
+
+.admin-menu-title {
+    padding: 10px;
+
+    color: #91a99e;
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: .7px;
+}
+
+.admin-menu a {
+    display: flex;
+    align-items: center;
+
+    color: #dbe7e1;
+
+    text-decoration: none;
+
+    padding: 11px 13px;
+
+    margin-bottom: 4px;
+
+    border-radius: 8px;
+
+    transition: .2s;
+}
+
+.admin-menu a i {
+    width: 25px;
+
+    font-size: 17px;
+}
+
+.admin-menu a:hover,
+.admin-menu a.active {
+    background: var(--admin-primary);
+    color: #fff;
+}
+
+
+/* ---------------------------------------------------------
+   MAIN AREA
+   --------------------------------------------------------- */
+
+.admin-main {
+    margin-left: 250px;
+
+    min-height: 100vh;
+}
+
+
+/* ---------------------------------------------------------
+   HERO
+   --------------------------------------------------------- */
+
+.admin-hero {
+    background:
+        linear-gradient(
+            135deg,
+            var(--admin-dark),
+            var(--admin-primary)
+        );
+
+    color: #fff;
+
+    padding: 28px 35px;
+}
+
+.admin-hero h2 {
+    margin: 0;
+
+    font-weight: 700;
+}
+
+.admin-hero p {
+    margin: 7px 0 0;
+
+    opacity: .9;
+}
+
+
+/* ---------------------------------------------------------
+   CONTENT
+   --------------------------------------------------------- */
+
+.admin-content {
+    padding: 30px 35px;
+}
+
+
+/* ---------------------------------------------------------
+   COMMON CARD
+   --------------------------------------------------------- */
+
+.admin-card {
+    background: #fff;
+
+    border: 0;
+
+    border-radius: 12px;
+
+    padding: 22px;
+
+    box-shadow:
+        0 3px 15px rgba(0, 0, 0, .06);
+}
+
+.admin-card-title {
+    font-weight: 700;
+
+    margin-bottom: 18px;
+}
+
+
+/* ---------------------------------------------------------
+   FORM
+   --------------------------------------------------------- */
+
+.admin-form-label {
+    font-weight: 600;
+
+    font-size: 14px;
+}
+
+.admin-form-control,
+.admin-form-select {
+    min-height: 42px;
+}
+
+.admin-form-control:focus,
+.admin-form-select:focus {
+    border-color: var(--admin-primary);
+
+    box-shadow:
+        0 0 0 .2rem rgba(25, 135, 84, .15);
+}
+
+
+/* ---------------------------------------------------------
+   BUTTONS
+   --------------------------------------------------------- */
+
+.btn-admin {
+    background: var(--admin-primary);
+
+    border-color: var(--admin-primary);
+
+    color: #fff;
+}
+
+.btn-admin:hover {
+    background: var(--admin-dark);
+
+    border-color: var(--admin-dark);
+
+    color: #fff;
+}
+
+
+/* ---------------------------------------------------------
+   APPLICATION / DATA ROW
+   --------------------------------------------------------- */
+
+.admin-data-row {
+    border: 1px solid #e7e7e7;
+
+    border-radius: 10px;
+
+    padding: 15px;
+
+    margin-bottom: 12px;
+
+    transition: .2s;
+}
+
+.admin-data-row:hover {
+    border-color: var(--admin-primary);
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, .05);
+}
+
+
+/* ---------------------------------------------------------
+   TEXT
+   --------------------------------------------------------- */
+
+.admin-small-text {
+    font-size: 13px;
+
+    color: var(--admin-muted);
+}
+
+.admin-primary-text {
+    color: var(--admin-dark);
+}
+
+
+/* ---------------------------------------------------------
+   RESULT FORM
+   --------------------------------------------------------- */
+
+.admin-result-form {
+    background: var(--admin-light);
+
+    border-radius: 10px;
+
+    padding: 20px;
+
+    margin-top: 15px;
+}
+
+
+/* ---------------------------------------------------------
+   EMPTY STATE
+   --------------------------------------------------------- */
+
+.admin-empty {
+    text-align: center;
+
+    padding: 50px 20px;
+
+    color: var(--admin-muted);
+}
+
+.admin-empty i {
+    font-size: 45px;
+
+    margin-bottom: 12px;
+}
+
+
+/* ---------------------------------------------------------
+   RESPONSIVE
+   --------------------------------------------------------- */
+
+@media (max-width: 991px) {
+
+    .admin-sidebar {
+        width: 220px;
+    }
+
+    .admin-main {
+        margin-left: 220px;
+    }
+
+    .admin-content {
+        padding: 25px 20px;
+    }
+}
+
+
+@media (max-width: 767px) {
+
+    .admin-sidebar {
+        position: relative;
+
+        width: 100%;
+
+        height: auto;
+    }
+
+    .admin-main {
+        margin-left: 0;
+    }
+
+    .admin-hero {
+        padding: 25px 20px;
+    }
+
+    .admin-content {
+        padding: 20px 15px;
+    }
+}
+
+/* ==========================================
+   ADMIN DASHBOARD STATISTICS
+========================================== */
+
+.stat-card {
+    min-height: 135px;
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 10px;
+
+    background: var(--admin-light);
+    color: var(--admin-primary);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+}
